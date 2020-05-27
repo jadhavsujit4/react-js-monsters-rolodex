@@ -8,18 +8,36 @@ class App extends Component{
     super();
     this.state = {
       monsters : [
-        // {
-        //   id: 'asc1',
-        //   name : 'Frankenstein'
-        // },
-        // {
-        //   id: 'asc2',
-        //   name : 'Dracula'
-        // },
-        // {
-        //   id: 'asc3',
-        //   name : 'Zombie'
-        // }
+        {
+          id: '1',
+          name : 'Frankenstein',
+          "email": "Franken@stein.com"
+        },
+        {
+          id: '2',
+          name : 'Dracula',
+          "email": "Dra@cula.com"
+        },
+        {
+          id: '3',
+          name : 'Zombie',
+          "email": "Zom@bie.com"
+        },
+        {
+          id: '4',
+          name : 'Vampire',
+          "email": "Vam@pire.com"
+        },
+        {
+          id: '5',
+          name : 'Shakaal',
+          "email": "Shak@all.com"
+        },
+        {
+          id: '6',
+          name : 'Mogambo',
+          "email": "Mogam@bo.com"
+        }
       ],
       searchField: ''
     };
@@ -27,11 +45,11 @@ class App extends Component{
     // this.handleChange = this.handleChange.bind(this);
   }
   
-  componentDidMount(){
-    fetch('https://jsonplaceholder.typicode.com/users')
-    .then(response => response.json())
-    .then(users => this.setState({monsters  : users}))
-  }
+  // componentDidMount(){
+  //   fetch('https://jsonplaceholder.typicode.com/users')
+  //   .then(response => response.json())
+  //   .then(users => this.setState({monsters  : users}))
+  // }
 
   handleChange = (e) => {
     this.setState({searchField: e.target.value})
